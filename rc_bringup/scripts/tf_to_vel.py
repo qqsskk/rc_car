@@ -36,6 +36,7 @@ if __name__ == '__main__':
     rate = rospy.Rate(10)   # 10 hz
 
     while not rospy.is_shutdown():
+	print('testing by niro')
         try:
             (trans, rot) = listener.lookupTransform(base_link, child_link, rospy.Time(0))
             current_pos[0] = trans[0]
